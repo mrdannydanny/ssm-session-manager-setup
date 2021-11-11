@@ -9,6 +9,8 @@
 
 ### Important
 
-Apparently there is a bug on SSM Documents when it comes to `SessionManagerRunShell`. If you notice that you are having trouble removing this document (in case it already exists or you want to deploy this setup multiple times) remove it using the cli as shown below:
+1. Apparently there is a bug on SSM Documents when it comes to `SessionManagerRunShell`. If you notice that you are having trouble removing this document (in case it already exists or you want to deploy this setup multiple times) remove it using the cli as shown below:
 
 `aws ssm delete-document --name SSM-SessionManagerRunShell --region <region-you-are-deploying>`
+
+2. Before performing the terraform destroy operation, make sure your s3 bucket is empty.
